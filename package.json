@@ -1,0 +1,47 @@
+{
+  "name": "xiaomi-zigbee-adapter",
+  "version": "0.0.1",
+  "description": "Xiaomi Zigbee adapter add-on for Mozilla IoT Gateway",
+  "author": "Arnaud Durand",
+  "contributors": [
+    "Andrew Linden"
+  ],
+  "main": "index.js",
+  "keywords": [
+    "mozilla",
+    "iot",
+    "adapter",
+    "zigbee",
+    "xiaomi",
+    "mijia"
+  ],
+  "homepage": "https://github.com/DurandA/xiaomi-zigbee-adapter",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DurandA/xiaomi-zigbee-adapter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DurandA/xiaomi-zigbee-adapter/issues"
+  },
+  "files": [
+    "LICENSE",
+    "SHA256SUMS",
+    "xiaomi-adapter.js",
+    "index.js"
+  ],
+  "dependencies": {
+    "zigbee-shepherd": "git+https://github.com/zigbeer/zigbee-shepherd.git"
+  },
+  "moziot": {
+    "api": {
+      "min": 1,
+      "max": 2
+    },
+    "plugin": true,
+    "exec": "{nodeLoader} {path}",
+    "config": {
+      "port": "/dev/ttyACM0"
+    }
+  }
+}
