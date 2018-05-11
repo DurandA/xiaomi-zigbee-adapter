@@ -26,7 +26,7 @@ try {
   Property = gwa.Property;
 }
 
-const wsdcgq01lm = {
+const WSDCGQ01LM = {
   type: 'thing',
   name: 'Xiaomi Mijia Smart Home Temperature and Humidity Sensor',
   properties: {
@@ -41,9 +41,29 @@ const wsdcgq01lm = {
   }
 };
 
+const WSDCGQ11LM = {
+  type: 'thing',
+  name: 'Xiaomi Aqara Temperature and Humidity Sensor',
+  properties: {
+    temperature: {
+      type: 'number',
+      unit: 'celcius'
+    },
+    humidity: {
+      type: 'number',
+      unit: 'percent'
+    },
+    pressure: {
+      type: 'number',
+      unit: 'hectopascal'
+    }
+  }
+};
+
 const THINGS = {
   4151: { // Xiaomi
-    'lumi.sens': wsdcgq01lm
+    'lumi.sens': WSDCGQ01LM,
+    'lumi.weather': WSDCGQ11LM
   }
 };
 
@@ -114,6 +134,7 @@ class XiaomiAdapter extends Adapter {
         break;
       case 'msPressureMeasurement':
         let pressure = parseFloat(data.data['16']) / 10.0;
+        device.properties.get('pressure').setValue(pressure);
         break;
       case 'msOccupancySensing': // motion sensor
         break;

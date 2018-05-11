@@ -20,7 +20,7 @@ After doing this, you should be able to go into _Settings -> Add-ons_ on the gat
 | ref        | description                                      | supported            |
 |------------|--------------------------------------------------|----------------------|
 | WSDCGQ01LM | Mijia Smart Home Temperature and Humidity Sensor | :heavy_check_mark:   |
-| WSDCGQ11LM | Aqara Temperature and Humidity Sensor            | :warning: not tested |
+| WSDCGQ11LM | Aqara Temperature and Humidity Sensor            | :heavy_check_mark:   |
 | RTCGQ11LM  | Aqara Human Body Sensor                          | :x:                  |
 | MCCGQ11LM  | Aqara Window and Door Sensor                     | :x:                  |
 | WXKG01LM   | Mijia Smart Wireless Switch                      | :x:                  |
