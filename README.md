@@ -5,10 +5,10 @@ Xiaomi Zigbee adapter add-on for Mozilla IoT Gateway
 This add-on is not currently available via the add-ons list, so manual installation is required.
 
 ```bash
-$ cd ~/mozilla-iot/gateway/build/addons
+$ cd ~/mozilla-iot/gateway/addons
 $ git clone https://github.com/DurandA/xiaomi-zigbee-adapter
 $ cd xiaomi-zigbee-adapter
-$ ./package.sh
+$ npm install .
 ```
 
 After doing this, you should be able to go into _Settings -> Add-ons_ on the gateway UI and enable the new add-on. After doing so, any discovered devices will show up in the usual "Add Things" screen (_Things -> +_).
